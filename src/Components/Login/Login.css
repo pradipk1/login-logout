@@ -1,0 +1,42 @@
+.loginContainer{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.loginForm{
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 0 10px black;
+}
+.loginInpCont{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+.loginInpCont>label{
+    margin-bottom: 5px;
+}
+.loginInpCont>input{
+    padding: 8px;
+
+}
+.submitBtnDiv{
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.submitBtnDiv>button{
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(236, 127, 49);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.submitBtnDiv>button:hover{
+    background-color: rgb(177, 85, 20);
+}

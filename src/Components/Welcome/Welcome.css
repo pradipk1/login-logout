@@ -1,0 +1,28 @@
+.welcomeCont{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+.welcomeDiv{
+    width: 250px;
+    padding: 30px 10px;
+    box-shadow: 0 0 10px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.welcomeDiv>h2{
+    margin-bottom: 15px;
+}
+.welcomeDiv>button{
+    width: fit-content;
+    padding: 5px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(236, 127, 49);
+    border: 1px solid black;
+    border-radius: 3px;
+}
+.welcomeDiv>button:hover{
+    background-color: rgb(177, 85, 20);
+}
