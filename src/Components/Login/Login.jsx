@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import './Login.css'
 import myContext from '../Context/Context';
+import { updateOpenGraphTags } from '../UpdateMeta/UpdateMeta';
 
 function Login() {
     const [formData, setFormData] = useState({
@@ -8,7 +9,7 @@ function Login() {
         password:''
     });
 
-    const {user, setUser} = useContext(myContext);
+    const {setUser} = useContext(myContext);
 
     const handleForm = (e) => {
         e.preventDefault();
@@ -17,11 +18,13 @@ function Login() {
             setUser({
                 name:formData.username,
                 isLoggedIn: true
-            })
+            });
+            updateOpenGraphTags(formData.username);
         } else {
             alert("Wrong credentials entered! Please try again.");
         }
     }
+
   return (
     <div className='loginContainer'>
         <form className='loginForm' onSubmit={handleForm}>
@@ -58,4 +61,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Login;

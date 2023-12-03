@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import myContext from '../Context/Context'
 import './Welcome.css';
+import { resetOpenGraphTags } from '../UpdateMeta/UpdateMeta';
 
 function Welcome() {
     const {user, setUser} = useContext(myContext);
@@ -10,6 +11,7 @@ function Welcome() {
             name:'',
             isLoggedIn: false
         });
+        resetOpenGraphTags();
     }
   return (
     <div className='welcomeCont'>
@@ -21,4 +23,4 @@ function Welcome() {
   )
 }
 
-export default Welcome
+export default Welcome;
